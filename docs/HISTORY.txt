@@ -1,0 +1,100 @@
+Changelog
+=========
+
+0.10 (unreleased)
+-----------------
+
+- Nothing changed yet.
+
+
+0.9 (2010-10-30)
+----------------
+
+Bristol Plone Conference 2010 sprint [ebrehault]
+
+     - Plone 4 compliancy
+     
+     - Fix "No component registry defined" error
+     
+     - GS profile
+     
+Previous versions
+-----------------
+
+October 2009 [macagua]
+     - Added support to i18n
+
+     - Added support to Spanish l10n
+
+Nov 2008 [andym]
+
+     - now works great from buildout
+     
+     - if it can't save to the save directory (which seems to be buildout default) gives a warning
+     
+     - copes with local not being there, and added in a sample script there anyway
+
+Feb 2008 [andym]
+
+     - now works with continued lines, with a \ on the end
+     
+     - escape html in large strings
+
+Sep 2007 [andym]
+
+     - autocomplete in safari now jumps you on to the end of the input field
+     
+     - up and down now works in safari, was sending two key down events, causing jumps in the history
+     
+     - input field now gets focus on load
+     
+     - if you get a tooltip then close it, it will reset, next time you get back to . you'll get the automcomplete code again
+
+August 2007 [andym]
+
+     - 0.8 released, if a session is dead, stop requesting it
+
+     - Everything else for Plone 3 appears good, apart from bugs that existed before
+
+August 2007 [wiggy]
+
+     - Change bootstrap.py to form Plone 3
+
+May 2007 [roeder]
+
+     - Remove action from portal_actions at uninstall time, fixing a
+       problem with Plone 3 beta4 SVN
+
+Feb 2007 [andym]
+
+    - Clean bug with bootstrap code where portal was assigned incorrectly.
+
+Jan 2007 [andym]
+
+    - Fix tab handling in safari, yay!
+    
+    - Doing an assignment will give you a tooltip too
+    
+    - Truncate large messages, yay! If a message is large it won't get syntax highlighted, and you can click to expand it. This makes the scrolling much nicer and is neat.
+    
+    - Nicer bigger font for results
+    
+    - Clean up error messages
+
+Nov 2006 [andym]
+
+    - Add in a transaction note, so that clouseau commits can also be backed out.
+
+Oct-Nov 2006 [andym]
+
+    - Autocomplete. Yay! 0.6 released.
+    
+Oct 25, 2006 [andym]
+
+    - Refined views, HTML and images a little
+    
+    - Added in save and load session functionality to save to the local
+      file system and load from the file system or from a remote URL
+
+    - Added this changes.txt
+

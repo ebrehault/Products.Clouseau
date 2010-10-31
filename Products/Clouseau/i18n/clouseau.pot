@@ -1,0 +1,433 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-06-08 15:14-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: clouseau\n"
+
+#: ./sessions.py:26
+msgid "A session was requested by a browser, but no session exists. This normally occurs when you leave a browser with a Clouseau session open and restart Zope or delete the session. Please close that browser window."
+msgstr ""
+
+#: ./introspect.py:51
+msgid "Arguments"
+msgstr ""
+
+#: ./introspect.py:89
+msgid "Attributes"
+msgstr ""
+
+#: ./introspect.py:88
+msgid "Callable"
+msgstr ""
+
+#. Default: "Create a new session"
+#: ./skins/Clouseau/clouseau_list.pt:39
+msgid "Create a new session"
+msgstr ""
+
+#: ./introspect.py:52
+msgid "Documentation"
+msgstr ""
+
+#: ./introspect.py:104
+msgid "Methods and attributes"
+msgstr ""
+
+#: ./introspect.py:50
+msgid "Name"
+msgstr ""
+
+#: ./introspect.py:110
+msgid "Namespace"
+msgstr ""
+
+#: ./introspect.py:22
+msgid "No arguments"
+msgstr ""
+
+#: ./introspect.py:46
+msgid "Not available"
+msgstr ""
+
+#: ./introspect.py:26
+msgid "Not available for a bultin in function"
+msgstr ""
+
+#: ./introspect.py:91
+msgid "Notes"
+msgstr ""
+
+#: ./introspect.py:61
+msgid "Objects"
+msgstr ""
+
+#: ./Extensions/Install.py:75
+msgid "Python prompt"
+msgstr ""
+
+#: ./introspect.py:66
+msgid "Schema"
+msgstr ""
+
+#. Default: "The sessions are stored on the file system. If you have multiple ZEO clients, this could be a problem. To edit, rename, delete sessions please use file system tools. Sessions are loaded from these directories in this order: ${clouseau_tool_list_save_directories}."
+#: ./skins/Clouseau/clouseau_load.pt:26
+msgid "discreet_clouseauload_sessions_stored"
+msgstr ""
+
+#. Default: "Clouseau is a hole in the standard security model, but not everyone considers that a valid model anymore. Certainly it allows a Plone user with the Manager role to do anything to your site. But they really could anyway. There are few things in the readme.txt that you can tweak but at the default setting:"
+#: ./skins/Clouseau/clouseau_help.pt:25
+msgid "help_clouseau_about_security"
+msgstr ""
+
+#. Default: "You are in a transaction, so you can commit it once you've done something. We've written a useful little module called <code>utils</code> for that which contains some useful methods <code>utils.commit()</code> and so on. That one command will commit the transaction."
+#: ./skins/Clouseau/clouseau_help.pt:82
+msgid "help_clouseau_change_something"
+msgstr ""
+
+#. Default: "Sure try: <code>app.manage_delObjects([\"Plone\",]); utils.commit()</code>. Woohoo."
+#: ./skins/Clouseau/clouseau_help.pt:53
+msgid "help_clouseau_delete_plone_site"
+msgstr ""
+
+#. Default: "Type in a Python command for example <code>portal.objectIds()</code> or <code>portal.portal_catalog()[:5]</code>. The possiblities are endless, when you type these commands you'll see tool tips fly by explaining what things are. Useful eh?"
+#: ./skins/Clouseau/clouseau_help.pt:46
+msgid "help_clouseau_do_next"
+msgstr ""
+
+#. Default: "Clouseau is a Zope and Plone debugger and introspector. It allows you to interact with Plone and alter it without being encumbered by security restrictions. It provides a Python prompt that is connected to the Zope database and contains all the objects from your Plone site. This is equivalent to a zopectl or PloneShell prompt."
+#: ./skins/Clouseau/clouseau_help.pt:16
+msgid "help_clouseau_heading"
+msgstr ""
+
+#. Default: "Go to the <em>Plone Control Panel</em> and click on Clouseau. This will list all the active sessions which you can join or delete. For now just create a new session. You'll get a web based Python prompt."
+#: ./skins/Clouseau/clouseau_help.pt:42
+msgid "help_clouseau_how_use"
+msgstr ""
+
+#. Default: "Nothing worse than writing a lot in a session and then losing it, no fear, click the save button to get it onto the filesystem. You can load sessions back from the filesystem, or directly through the web. Where sessions are saved to is shown on the main Clouseau view."
+#: ./skins/Clouseau/clouseau_help.pt:88
+msgid "help_clouseau_saving_sessions"
+msgstr ""
+
+#. Default: "Give it a try on your test sandbox or development site. See how useful it is. Then leave it on your development sites, don't put it on your live production sites, that's fine. It's really a <em>development tool</em>."
+#: ./skins/Clouseau/clouseau_help.pt:38
+msgid "help_clouseau_still_worried"
+msgstr ""
+
+#. Default: "You'll need DocFinderTab installed for all the details, more useful than a dir."
+#: ./skins/Clouseau/clouseau_help.pt:77
+msgid "help_clouseau_tooltip_support"
+msgstr ""
+
+#. Default: "When you are in a prompt, try the <em>up</em> or <em>down</em> arrows to scroll through commands you've written."
+#: ./skins/Clouseau/clouseau_help.pt:79
+msgid "help_clouseau_up_and_down"
+msgstr ""
+
+#. Default: "Many developers spend their time in Plone so this allows you to access debugging and introspection quickly and simply. There a few other neat things:"
+#: ./skins/Clouseau/clouseau_help.pt:57
+msgid "help_clouseau_why_web"
+msgstr ""
+
+#. Default: "<img src=\"xmag.png\" style=\"float: right; padding: 2em;\" /> <b>Warning</b>: this tool allows users to interact with your Zope at its most basic level. It will allow a user to <b>add, edit, delete any data in the site</b> ignoring all but Zope security. This tool should <b>only be used on development sites</b>. If you are at all unsure, stop, back away and uninstall this product immediately and go and ${help_clouseaulist_read_help}."
+#: ./skins/Clouseau/clouseau_list.pt:33
+msgid "help_clouseaulist_enabled"
+msgstr ""
+
+#. Default: "<img src=\"viewmag+.png\" style=\"float: left; padding: 2em;\" /> <b>The inspector is not enabled</b>. There are settings in the file <em>config.py</em>. If you don't want to read the <em>readme.txt</em> about these settings then please note: <em>By default Clouseau will only be enabled if you run Zope with debug-mode turned on</em>."
+#: ./skins/Clouseau/clouseau_list.pt:18
+msgid "help_clouseaulist_not_enabled"
+msgstr ""
+
+#. Default: "<b>Warning:</b> loading in code from a random URL, without first being sure what's there is not a good idea. You'd be crazy if you didn't know what site you were connecting to."
+#: ./skins/Clouseau/clouseau_load.pt:34
+msgid "help_clouseauload_url"
+msgstr ""
+
+#. Default: "This is a javascript intensive application and something went wrong. Either 1) you do not have javascript enabled or 2) the Javascript to initialize Clouseau failed and a Javascript error has occurred."
+#: ./skins/Clouseau/clouseau_macros.pt:27
+msgid "help_clouseaumacros_warning"
+msgstr ""
+
+#. Default: "What about security?"
+#: ./skins/Clouseau/clouseau_help.pt:24
+msgid "label_clouseau_about_security"
+msgstr ""
+
+#. Default: "What if I change something?"
+#: ./skins/Clouseau/clouseau_help.pt:81
+msgid "label_clouseau_change_something"
+msgstr ""
+
+#. Default: "This is mostly written and maintained by Andy McKay, mail me at <a href=\"mailto:andy@clearwind.ca\">andy@clearwind.ca</a>, with help and support from many. New releases, bugs and features are at <a href=\"http://plone.org/products/clouseau\" title=\"Web site Clouseau on Plone Products\">plone.org</a>."
+#: ./skins/Clouseau/clouseau_help.pt:93
+msgid "label_clouseau_copyright"
+msgstr ""
+
+#. Default: "Hope this helps."
+#: ./skins/Clouseau/clouseau_help.pt:97
+msgid "label_clouseau_copyright1"
+msgstr ""
+
+#. Default: "Can I delete my plone site with this?"
+#: ./skins/Clouseau/clouseau_help.pt:52
+msgid "label_clouseau_delete_plone_site"
+msgstr ""
+
+#. Default: "What do I do next?"
+#: ./skins/Clouseau/clouseau_help.pt:45
+msgid "label_clouseau_do_next"
+msgstr ""
+
+#. Default: "How do I use it?"
+#: ./skins/Clouseau/clouseau_help.pt:41
+msgid "label_clouseau_how_use"
+msgstr ""
+
+#. Default: "Saving sessions"
+#: ./skins/Clouseau/clouseau_help.pt:87
+msgid "label_clouseau_saving_sessions"
+msgstr ""
+
+#. Default: "I'm still worried about security"
+#: ./skins/Clouseau/clouseau_help.pt:37
+msgid "label_clouseau_still_worried"
+msgstr ""
+
+#. Default: "Extended tooltip support"
+#: ./skins/Clouseau/clouseau_help.pt:76
+msgid "label_clouseau_tooltip_support"
+msgstr ""
+
+#. Default: "Up and down"
+#: ./skins/Clouseau/clouseau_help.pt:78
+msgid "label_clouseau_up_and_down"
+msgstr ""
+
+#. Default: "So this is cool, but why do this in the web?"
+#: ./skins/Clouseau/clouseau_help.pt:55
+msgid "label_clouseau_why_web"
+msgstr ""
+
+#. Default: "Delete"
+#: ./skins/Clouseau/clouseau_list.pt:55
+msgid "label_clouseaulist_delete"
+msgstr ""
+
+#. Default: "Join"
+#: ./skins/Clouseau/clouseau_list.pt:50
+msgid "label_clouseaulist_join"
+msgstr ""
+
+#. Default: "Session"
+#: ./skins/Clouseau/clouseau_list.pt:46
+msgid "label_clouseaulist_session"
+msgstr ""
+
+#. Default: "<b>Note</b>: a large number of sessions (more than 4-5) will start to cause warnings to be written to the Zope log as resources are consumed, try and delete unused sessions. Sessions are also deleted on server restarts."
+#: ./skins/Clouseau/clouseau_list.pt:59
+msgid "label_clouseaulist_sessions"
+msgstr ""
+
+#. Default: "Up to site setup"
+#: ./skins/Clouseau/clouseau_list.pt:14
+msgid "label_clouseaulist_uplevel"
+msgstr ""
+
+#. Default: "URL"
+#: ./skins/Clouseau/clouseau_load.pt:33
+msgid "label_clouseauload_url"
+msgstr ""
+
+#. Default: "Commands"
+#: ./skins/Clouseau/clouseau_macros.pt:71
+msgid "label_clouseaumacros_commands"
+msgstr ""
+
+#. Default: "Delete"
+#: ./skins/Clouseau/clouseau_macros.pt:72
+msgid "label_clouseaumacros_delete"
+msgstr ""
+
+#. Default: "Help"
+#: ./skins/Clouseau/clouseau_macros.pt:96
+msgid "label_clouseaumacros_help"
+msgstr ""
+
+#. Default: "Hide"
+#: ./skins/Clouseau/clouseau_macros.pt:87
+msgid "label_clouseaumacros_hide"
+msgstr ""
+
+#. Default: "Link"
+#: ./skins/Clouseau/clouseau_macros.pt:73
+msgid "label_clouseaumacros_link"
+msgstr ""
+
+#. Default: "<img src=\"button_cancel.png\" style=\"float: left; padding: 2em;\" /> <b>The inspector is not enabled</b>. There are settings in the file <em>config.py</em>. If you don't want to read the <em>readme.txt</em> about these settings then please note: <em>By default Clouseau will only be enabled if you run Zope with debug-mode turned on</em>."
+#: ./skins/Clouseau/clouseau_macros.pt:104
+msgid "label_clouseaumacros_notenabled"
+msgstr ""
+
+#. Default: "Save"
+#: ./skins/Clouseau/clouseau_macros.pt:92
+msgid "label_clouseaumacros_save"
+msgstr ""
+
+#. Default: "Session"
+#: ./skins/Clouseau/clouseau_macros.pt:69
+msgid "label_clouseaumacros_session"
+msgstr ""
+
+#. Default: "Show"
+#: ./skins/Clouseau/clouseau_macros.pt:82
+msgid "label_clouseaumacros_show"
+msgstr ""
+
+#. Default: "Status"
+#: ./skins/Clouseau/clouseau_macros.pt:70
+msgid "label_clouseaumacros_status"
+msgstr ""
+
+#. Default: "Text"
+#: ./skins/Clouseau/clouseau_macros.pt:77
+msgid "label_clouseaumacros_text"
+msgstr ""
+
+#. Default: "Up to session list"
+#: ./skins/Clouseau/clouseau_macros.pt:14
+msgid "label_clouseaumacros_upsessionlist"
+msgstr ""
+
+#. Default: "XML"
+#: ./skins/Clouseau/clouseau_macros.pt:74
+msgid "label_clouseaumacros_xml"
+msgstr ""
+
+#. Default: "Load an old session"
+#: ./skins/Clouseau/clouseau_load.pt:12
+msgid "legend_clouseauload_old_session"
+msgstr ""
+
+#. Default: "Load a session from a URL"
+#: ./skins/Clouseau/clouseau_load.pt:31
+msgid "legend_clouseauload_session_url"
+msgstr ""
+
+#. Default: "load"
+#: ./skins/Clouseau/clouseau_load.pt:40
+msgid "load"
+msgstr ""
+
+#. Default: "Only users with the Plone Manager role can use this"
+#: ./skins/Clouseau/clouseau_help.pt:32
+msgid "note_clouseau_about_security"
+msgstr ""
+
+#. Default: "If your site is <em>not</em> running in debug mode, Clouseau will be completely inactive and disabled"
+#: ./skins/Clouseau/clouseau_help.pt:33
+msgid "note_clouseau_about_security1"
+msgstr ""
+
+#. Default: "Cross platform, works on everything (including windows)"
+#: ./skins/Clouseau/clouseau_help.pt:61
+msgid "note_clouseau_why_web0"
+msgstr ""
+
+#. Default: "Zero dependencies"
+#: ./skins/Clouseau/clouseau_help.pt:62
+msgid "note_clouseau_why_web1"
+msgstr ""
+
+#. Default: "No ZEO required"
+#: ./skins/Clouseau/clouseau_help.pt:63
+msgid "note_clouseau_why_web2"
+msgstr ""
+
+#. Default: "2 or more people can connect to one session. Collaborative debugging at it's finest."
+#: ./skins/Clouseau/clouseau_help.pt:64
+msgid "note_clouseau_why_web3"
+msgstr ""
+
+#. Default: "A context sensitive Plone prompt. When looking at a content object (eg: front-page) look for the little magnifying glass in the document actions (just to the right of the print). This will bring you a Python prompt. Try typing <code>context.meta_type</code>"
+#: ./skins/Clouseau/clouseau_help.pt:66
+msgid "note_clouseau_why_web4"
+msgstr ""
+
+#. Default: "Features"
+#: ./skins/Clouseau/clouseau_help.pt:74
+msgid "title_clouseau_features"
+msgstr ""
+
+#. Default: "Clouseau help"
+#: ./skins/Clouseau/clouseau_help.pt:11
+msgid "title_clouseauhelp_heading"
+msgstr ""
+
+#. Default: "Clouseau"
+#: ./skins/Clouseau/clouseau_list.pt:11
+msgid "title_clouseaulist_heading"
+msgstr ""
+
+#. Default: "Clouseau Session"
+#: ./skins/Clouseau/clouseau_macros.pt:12
+msgid "title_clouseaumacros_heading"
+msgstr ""
+
+#. Default: "Help on Clouseau"
+#: ./skins/Clouseau/clouseau_macros.pt:93
+msgid "title_clouseaumacros_help"
+msgstr ""
+
+#. Default: "Hide previous lines in this session"
+#: ./skins/Clouseau/clouseau_macros.pt:84
+msgid "title_clouseaumacros_hide"
+msgstr ""
+
+#. Default: "Save this session"
+#: ./skins/Clouseau/clouseau_macros.pt:89
+msgid "title_clouseaumacros_save"
+msgstr ""
+
+#. Default: "Show all lines in this session"
+#: ./skins/Clouseau/clouseau_macros.pt:79
+msgid "title_clouseaumacros_show"
+msgstr ""
+
+#. Default: "Link to text dump for this session"
+#: ./skins/Clouseau/clouseau_macros.pt:75
+msgid "title_clouseaumacros_text"
+msgstr ""
+
+#. Default: "Finish and delete this session"
+#: ./skins/Clouseau/clouseau_macros.pt:72
+msgid "title_clouseaumacros_finish_delete"
+msgstr ""
+
+#. Default: "Link to (or reload) this session"
+#: ./skins/Clouseau/clouseau_macros.pt:73
+msgid "title_clouseaumacros_reload"
+msgstr ""
+
+#. Default: "Link to xml for this session"
+#: ./skins/Clouseau/clouseau_macros.pt:74
+msgid "title_clouseaumacros_xml"
+msgstr ""
+
+#. Default: "<b>Warning:</b> you do not currently have permissions to the save sessions. You would need to go and give those to the directories above. <b>Trying to save sessions will cause errors.</b>"
+#: ./skins/Clouseau/clouseau_load.pt:31
+msgid "warning_not_can_save_session"
+msgstr ""

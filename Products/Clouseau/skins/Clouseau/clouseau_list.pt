@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="here/prefs_main_template/macros/master"
+      i18n:domain="clouseau">
+
+<body>
+    <span metal:fill-slot="prefs_configlet_main">
+		<h2 i18n:translate="title_clouseaulist_heading">Clouseau</h2>
+		<a href="/plone_control_panel" tal:attributes="href string:${context/portal_url}/plone_control_panel"
+		   class="link-parent">
+            <span i18n:translate="label_clouseaulist_uplevel">Up to site setup</span>
+        </a>
+
+		<tal:block condition="not: context/clouseau_tool/enabled">
+            <p i18n:translate="help_clouseaulist_not_enabled">
+		        <img src="viewmag+.png" style="float: left; padding: 2em;" />
+                <b>The inspector is not enabled</b>. There are settings in the 
+                file <em>config.py</em>. If you don't want to read the <em>readme.txt</em> 
+                about these settings then please note: <em>By default Clouseau will only 
+                be enabled if you run Zope with debug-mode turned on</em>.
+            </p>
+		</tal:block>
+		<tal:block condition="context/clouseau_tool/enabled">
+		    <p i18n:translate="help_clouseaulist_enabled">
+    		    <img src="xmag.png" style="float: right; padding: 2em;" />
+        		<b>Warning</b>: this tool allows users to interact with your Zope at its most
+        		basic level. It will allow a user to <b>add, edit, delete any data in the site</b>
+        		ignoring all but Zope security. This tool should <b>only be used on development sites</b>.
+        		If you are at all unsure, stop, back away and uninstall this product immediately
+        		and go and <a href="clouseau_help" tal:attributes="href string:$portal_url/clouseau_help"
+        		i18n:name="help_clouseaulist_read_help">read the help</a>.
+        	</p>
+
+		    <p>
+		        <img src="" tal:attributes="src string:$portal_url/add_alternative_icon.gif" />
+		        <a href="clouseau_view" tal:attributes="href string:$portal_url/clouseau_view"
+		           i18n:translate="">Create a new session</a>
+		    </p>
+		    <span tal:define="sessions context/clouseau_tool/list_session_info">
+
+            <ul tal:condition="sessions">
+			        <li tal:repeat="session sessions">
+			            <span i18n:translate="label_clouseaulist_session">Session</span> <strong tal:content="session/session_id">1</strong>:
+			            <img src="" tal:attributes="src string:$portal_url/add_alternative_icon.gif" />
+			            <a href="" 
+			               tal:attributes="href string:$portal_url/clouseau_view?session_id=${session/session_id}">
+			                  <span i18n:translate="label_clouseaulist_join">Join</span>
+				    </a>
+			            <img src="" tal:attributes="src string:$portal_url/delete_icon.gif" />
+    			        <a href="#" 
+    			           tal:attributes="href string:$portal_url/clouseau_tool/stop_session?session_id=${session/session_id}">
+				    <span i18n:translate="label_clouseaulist_delete">Delete</span>
+				</a>
+    			    </li>
+            </ul>
+            		    <p class="discreet" tal:condition="sessions" i18n:translate="label_clouseaulist_sessions">
+                            <b>Note</b>: a large number of sessions (more than 4-5) will start to cause warnings
+                        	to be written to the Zope log as resources are consumed, try and delete unused sessions.
+                        	Sessions are also deleted on server restarts.
+                        </p>                        
+            <span metal:use-macro="context/clouseau_load/macros/loads"></span>
+
+            </span>
+		</tal:block>
+    </span>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<object name="portal_skins"
+        meta_type="Plone Skins Tool"
+        allow_any="False"
+        cookie_persistence="False"
+        request_varname="plone_skin">
+
+ <object name="clouseau" meta_type="Filesystem Directory View"
+    directory="Products.Clouseau:skins/Clouseau"/>
+ 
+ <skin-path name="*">
+  <layer insert-after="custom" 
+         name="clouseau"/>
+ </skin-path>
+
+</object>

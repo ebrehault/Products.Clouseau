@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="clouseau">
+
+<body>
+    <div>
+        
+        <span metal:define-macro="title">
+        <h2 i18n:translate="title_clouseaumacros_heading">Clouseau Session</h2>
+            <a href="/plone_control_panel" tal:attributes="href string:${context/portal_url}/clouseau_list" class="link-parent">
+                <span i18n:translate="label_clouseaumacros_upsessionlist">Up to session list</span>
+            </a>
+        </span>
+        <span metal:define-macro="prompt">
+            <script type="text/javascript" src="sarissa.js"></script>
+            <script type="text/javascript" src="shCore.js"></script>
+            <script type="text/javascript" src="shClouseau.js"></script>
+            <script type="text/javascript" src="shBrushPython.js"></script>
+            <script type="text/javascript" src="process.js"></script>            
+            <script type="text/javascript" src="ui.js"></script>
+
+
+            
+            <p class="portalMessage" id="clouseau-warning" i18n:translate="help_clouseaumacros_warning">
+                This is a javascript intensive application and something went wrong. Either 1) you do not have javascript enabled or 2) the Javascript to initialize Clouseau failed and a Javascript error has occurred.
+            </p>
+    		<tal:block condition="context/clouseau_tool/enabled">
+    	    	<a name="focuspoint" id="focuspoint"></a>
+        		<form onSubmit="javascript: return false;" id="form">
+        		    <table class="output-table" id="output-table">
+        			<tr id="input-row">
+        				<td class="line-number">&nbsp;&nbsp;</td>
+        				<td><code id="input-prompt" class="clouseau-prompt">>>></code></td>
+        				<td id="input-td">
+        				    <input type="text" id="input-field" 
+                            size="80" onKeyDown="return inputKeydown(event);"
+                            onKeyUp="return inputKeyup(event);">
+                            
+        				</td>
+        			</tr>
+        			<tr class="border">
+        			    <td></td>
+        			    <td></td>
+        			    <td>
+        			        <span class="discreet">
+        			            <span id="autocomplete-start"></span><span id="autocomplete-rest"></span>
+        			        </span>
+        			    </td>
+        			</tr>
+        			<tr>
+        			    <td></td>
+        			    <td></td>
+        			    <td>
+        			        <dl id="tip-output" class="discreet">
+                            </dl>
+        			    </td>
+        			</tr>
+                	</table>
+        		</form>
+            </tal:block>
+        </span>
+        <span metal:define-macro="footer">
+            <tal:block condition="context/clouseau_tool/enabled">
+        		<div id="message-wrapper">
+        			<p class="discreet">
+    			        <b><span i18n:translate="label_clouseaumacros_session">Session</span> <span id="session-id">1</span></b> |  
+    			        <b i18n:translate="label_clouseaumacros_status">Status</b> <span id="message"></span> <br />
+        			    <b i18n:translate="label_clouseaumacros_commands">Commands</b>
+        			    <a href="" id="session-delete" title="Finish and delete this session" i18n:attributes="title title_clouseaumacros_finish_delete"><img src="" tal:attributes="src string:$portal_url/delete_icon.gif" /> <span i18n:translate="label_clouseaumacros_delete">Delete</span></a>
+        			    <a href="" id="session-link" title="Link to (or reload) this session" i18n:attributes="title title_clouseaumacros_reload"><img src="" tal:attributes="src string:$portal_url/clouseau.png" /> <span i18n:translate="label_clouseaumacros_link">Link</span></a>
+        			    <a href="" id="session-xml-link" title="Link to xml for this session" i18n:attributes="title title_clouseaumacros_xml"><img src="" tal:attributes="src string:$portal_url/xml.gif" /> <span i18n:translate="label_clouseaumacros_xml">XML</span></a>
+                        <a href="" id="session-text-link" title="Link to text dump for this session"
+			   i18n:attributes="title title_clouseaumacros_text">
+			      <img src="" tal:attributes="src string:$portal_url/document_icon.gif"> <span i18n:translate="label_clouseaumacros_text">Text</span>
+			</a>
+                        <a href="" onClick="clouseauChange(''); return false;" title="Show all lines in this session"
+			   i18n:attributes="title title_clouseaumacros_show">
+			      <img src="" tal:attributes="src string:$portal_url/add_alternative_icon.gif">
+				    <span i18n:translate="label_clouseaumacros_show">Show</span>
+			</a>
+                        <a href="" onClick="clouseauChange('none'); return false;" title="Hide previous lines in this session"
+			   i18n:attributes="title title_clouseaumacros_hide">
+			      <img src="" tal:attributes="src string:$portal_url/download_icon.gif" />
+			      <span i18n:translate="label_clouseaumacros_hide">Hide</span>
+			</a>                         
+                        <a href="" id="session-save" title="Save this session" tal:attributes="href string:$portal_url/clouseau_tool/save_session?session_id="
+			   i18n:attributes="title title_clouseaumacros_save">
+			      <img src="" tal:attributes="src string:$portal_url/save_all.png" />
+			      <span i18n:translate="label_clouseaumacros_save">Save</span></a>
+                         <a href="" title="Help on Clouseau" tal:attributes="href string:$portal_url/clouseau_help"
+			    i18n:attributes="title title_clouseaumacros_help">
+			      <img src="" tal:attributes="src string:$portal_url/info_icon.gif" />
+			      <span i18n:translate="label_clouseaumacros_help">Help</span></a>
+        			    
+        			</p>
+        			<a name="footer-focus"></a>
+        		</div>
+            </tal:block>
+        </span>
+		<tal:block condition="not: context/clouseau_tool/enabled">
+            <p i18n:translate="label_clouseaumacros_notenabled">
+		        <img src="button_cancel.png" style="float: left; padding: 2em;" />
+                <b>The inspector is not enabled</b>. There are settings in the 
+                file <em>config.py</em>. If you don't want to read the <em>readme.txt</em> 
+                about these settings then please note: <em>By default Clouseau will only 
+                be enabled if you run Zope with debug-mode turned on</em>.
+            </p>
+        </tal:block>
+    </div>
+</body>
+</html>

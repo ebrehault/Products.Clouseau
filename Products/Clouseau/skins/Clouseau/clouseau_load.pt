@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="clouseau">
+
+<body>
+        <span metal:define-macro="loads" tal:define="tool context/clouseau_tool">
+            <form method="get" action="" tal:attributes="action string: ${tool/absolute_url}/clouseau_view">
+   		        <fieldset>
+   		            <legend i18n:translate="legend_clouseauload_old_session">Load an old session</legend>
+   		    
+            <ul>
+		    <li
+		        tal:repeat="filename python: tool.list_saved_sessions(short=True)">
+		        <a href=""
+		           class="sessionid"
+		           tal:attributes="href string: ${tool/absolute_url}/clouseau_view?filename=$filename"><span tal:content="filename"></span></a><br />
+		    </li>
+		    </ul>
+		    <p class="discreet" i18n:translate="discreet_clouseauload_sessions_stored">
+                The sessions are stored on the file system. If you have multiple ZEO clients, this could be a problem. 
+                To edit, rename, delete sessions please use file system tools. Sessions are loaded from
+                these directories in this order:
+		<em i18n:name="clouseau_tool_list_save_directories"
+		    tal:content="python: ', '.join(context.clouseau_tool.list_save_directories())"></em>.
+            </p>
+            </fieldset>
+            <fieldset>
+                <legend i18n:translate="legend_clouseauload_session_url">Load a session from a URL</legend>
+		        <div class="field">
+		            <label for="filename" i18n:translate="label_clouseauload_url">URL</label>
+                    <div class="formHelp" i18n:translate="help_clouseauload_url"><b>Warning:</b> loading in code from a random URL, without 
+        		        first being sure what's there is not a good idea. You'd be crazy if you didn't know
+        		        what site you were connecting to.</div>
+		            <input type="text" name="filename" value="http://" />
+	            </div>
+		        <div class="field">
+		            <input type="submit" class="context" value="load" i18n:attributes="value" />
+                </div>
+
+		        </fieldset>
+		    </form>
+		</span>
+</body>
+</html>

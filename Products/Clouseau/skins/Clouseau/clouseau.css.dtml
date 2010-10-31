@@ -1,0 +1,107 @@
+.fixed-width {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.clouseau-info {
+	background: white;
+	color: grey;
+}
+
+.clouseau-warning {
+	background: white;
+	color: red;
+	font-weight: bold;
+}
+
+.clouseau-error {
+	background-color: red;
+	color: white;
+	font-weight: bold;
+}
+
+.clouseau-prompt {
+    margin: none !important;
+	border: none !important;
+	background-color: white !important;
+}
+
+#clouseau-top {
+    font-size: 100%;
+}
+
+
+#message-wrapper {
+    margin-top: 2em;
+}
+
+#clouseau_iframe iframe {
+
+    border: none;
+    margin: 1em;
+}
+
+#clouseau-footer td {
+    vertical-align: top;
+}
+
+#autocomplete-start {
+}
+
+#autocomplete-rest {
+    color: green;
+    text-decoration: underline;
+}
+
+#tip-output dt {
+    border-bottom: 1px solid lightgrey !important;
+}
+
+.clouseau-prompt {
+    color: grey;
+    padding-right: 2em;
+}
+
+.clouseau-line-number {
+	color: grey;
+	padding-right: 2em;
+}
+
+.output-cell {
+    height: 0px !important;
+}
+
+#input-field {
+    font-family: Monaco, "Courier New", Courier, monospace;
+}
+
+div.dp-highlighter {
+    display: inline;
+    height: 0px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+div.dp-highlighter table {
+    display: block;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+a.truncated-none {
+    background: transparent url(&dtml-portal_url;/arrowUpAlternative.gif) center left no-repeat;
+    padding-left: 18px;
+	color: black;
+}
+
+a.truncated-block {
+    background: transparent url(&dtml-portal_url;/arrowDown.gif) center left no-repeat;
+    padding-left: 18px;
+	color: black;
+}
+
+#output-table code {
+    color: grey;
+    background-color: white;
+    border-left: 3px solid grey;
+    padding: 0.5em;
+}

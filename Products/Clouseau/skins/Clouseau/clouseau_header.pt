@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="clouseau">
+
+<head metal:define-macro="html_header"
+      tal:define="plone_view context/@@plone;
+                  view nocall:view | nocall: plone_view;
+                  isRTL context/@@plone_portal_state/is_rtl;">
+   <tal:comment replace="nothing"> Plone 3.0 header </tal:comment>
+
+    <metal:baseslot define-slot="base">
+      <base tal:attributes="href here/renderBase" /><!--[if lt IE 7]></base><![endif]-->
+    </metal:baseslot>
+
+    <div tal:replace="structure provider:plone.htmlhead" />
+
+    <!-- Internet Explorer CSS Fixes -->
+    <tal:iefixstart replace="structure string:&lt;!--[if IE]&gt;" />
+        <style type="text/css" media="all" tal:condition="exists: portal/IEFixes.css"
+               tal:content="string:@import url($portal_url/IEFixes.css);">
+        </style>
+    <tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
+
+    <link tal:replace="structure provider:plone.htmlhead.links" />
+
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no" />
+
+</head>
+</html>

@@ -1,0 +1,114 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-06-09 16:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+#: ./sessions.py:26
+msgid "A session was requested by a browser, but no session exists. This normally occurs when you leave a browser with a Clouseau session open and restart Zope or delete the session. Please close that browser window."
+msgstr ""
+
+#: ./introspect.py:51
+msgid "Arguments"
+msgstr ""
+
+#: ./introspect.py:89
+msgid "Attributes"
+msgstr ""
+
+#: ./introspect.py:88
+msgid "Callable"
+msgstr ""
+
+#: ./introspect.py:52
+msgid "Documentation"
+msgstr ""
+
+#: ./introspect.py:104
+msgid "Methods and attributes"
+msgstr ""
+
+#: ./introspect.py:50
+msgid "Name"
+msgstr ""
+
+#: ./introspect.py:110
+msgid "Namespace"
+msgstr ""
+
+#: ./introspect.py:22
+msgid "No arguments"
+msgstr ""
+
+#: ./introspect.py:46
+msgid "Not available"
+msgstr ""
+
+#: ./introspect.py:26
+msgid "Not available for a bultin in function"
+msgstr ""
+
+#: ./introspect.py:91
+msgid "Notes"
+msgstr ""
+
+#: ./introspect.py:61
+msgid "Objects"
+msgstr ""
+
+#: ./Extensions/Install.py:75
+msgid "Python prompt"
+msgstr ""
+
+#: ./introspect.py:66
+msgid "Schema"
+msgstr ""
+
+#. Default: "Commands"
+#: ./skins/Clouseau/clouseau_minimal.pt:44
+msgid "label_clouseaumacros_commands"
+msgstr ""
+
+#. Default: "Hide"
+#: ./skins/Clouseau/clouseau_minimal.pt:53
+msgid "label_clouseaumacros_hide"
+msgstr ""
+
+#. Default: "Session"
+#: ./skins/Clouseau/clouseau_minimal.pt:42
+msgid "label_clouseaumacros_session"
+msgstr ""
+
+#. Default: "Show"
+#: ./skins/Clouseau/clouseau_minimal.pt:48
+msgid "label_clouseaumacros_show"
+msgstr ""
+
+#. Default: "Status"
+#: ./skins/Clouseau/clouseau_minimal.pt:43
+msgid "label_clouseaumacros_status"
+msgstr ""
+
+#. Default: "Hide previous lines in this session"
+#: ./skins/Clouseau/clouseau_minimal.pt:50
+msgid "title_clouseaumacros_hide"
+msgstr ""
+
+#. Default: "Show all lines in this session"
+#: ./skins/Clouseau/clouseau_minimal.pt:45
+msgid "title_clouseaumacros_show"
+msgstr ""
+

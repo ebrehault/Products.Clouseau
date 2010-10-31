@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-icons>
+ <action-icon category="controlpanel" action_id="Clouseau"
+              title="Clouseau" priority="0"
+              icon_expr="clouseau.png"/>
+ <action-icon category="plone" action_id="clouseau_view"
+              title="Python prompt" priority="0"
+              icon_expr="clouseau.png"/>
+</action-icons>

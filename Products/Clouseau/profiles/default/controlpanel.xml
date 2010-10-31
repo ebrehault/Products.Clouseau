@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object name="portal_controlpanel" meta_type="Plone Control Panel Tool">
+ <configlet title="Clouseau" action_id="Clouseau" appId="Clouseau"
+    category="Products" condition_expr=""
+    url_expr="string:${portal_url}/clouseau_list" visible="True">
+  <permission>Manage portal</permission>
+ </configlet>
+</object>

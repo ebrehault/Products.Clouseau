@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="here/prefs_main_template/macros/master"
+      i18n:domain="clouseau">
+
+<body>
+    <span metal:fill-slot="prefs_configlet_main">
+        <span metal:use-macro="context/clouseau_macros/macros/title"></span>
+        <span metal:use-macro="context/clouseau_macros/macros/prompt"></span>
+        <span metal:use-macro="context/clouseau_macros/macros/footer"></span>
+    </span>
+</body>
+</html>

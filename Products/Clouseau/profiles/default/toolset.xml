@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tool-setup>
+
+ <required tool_id="clouseau_tool"
+           class="Products.Clouseau.ClouseauTool"/>
+
+</tool-setup>
