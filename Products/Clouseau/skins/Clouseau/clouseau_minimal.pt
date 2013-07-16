@@ -12,7 +12,9 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       tal:define="language context/@@plone_portal_state/language;
                   isRTL context/@@plone_portal_state/is_rtl;
-                  portal_url context/@@plone_portal_state/portal_url;"
+                  portal_url context/@@plone_portal_state/portal_url;
+                  plone_view context/@@plone;
+                  view nocall:view | nocall: plone_view;"
       tal:attributes="lang language;
                       xml:lang language">
 
@@ -29,35 +31,35 @@
 
     <metal:fillbase fill-slot="base">
       <metal:baseslot define-slot="base">
-        <base href="" tal:attributes="href here/renderBase" />
+        <base href="" tal:attributes="href context/@@plone/renderBase" />
       </metal:baseslot>
     </metal:fillbase>
 
   </head>
 
-  <body tal:attributes="class here/getSectionFromURL;
+  <body tal:attributes="class python:plone_view.bodyClass(template, view);
                         dir python:test(isRTL, 'rtl', 'ltr')">
     <div id="clouseau-visual-portal-wrapper">
       <div id="clouseau-top" i18n:domain="plone">
             <span metal:use-macro="context/clouseau_macros/macros/prompt"></span>
             <div id="message-wrapper">
-    			<p class="discreet">
-    			    <b><span i18n:translate="label_clouseaumacros_session">Session</span> <span id="session-id">1</span></b> |
-			    <b i18n:translate="label_clouseaumacros_status">Status</b> <span id="message"></span><br />
-    			    <b i18n:translate="label_clouseaumacros_commands">Commands</b>
+                <p class="discreet">
+                    <b><span i18n:translate="label_clouseaumacros_session">Session</span> <span id="session-id">1</span></b> |
+                    <b i18n:translate="label_clouseaumacros_status">Status</b> <span id="message"></span><br />
+                    <b i18n:translate="label_clouseaumacros_commands">Commands</b>
                     <a href="" onClick="clouseauChange(''); return false;" title="Show all lines in this session"
-		       i18n:attributes="title title_clouseaumacros_show">
-		      <img src="" tal:attributes="src string:$portal_url/add_alternative_icon.gif">
-		      <span i18n:translate="label_clouseaumacros_show">Show</span>
-		    </a>
+                       i18n:attributes="title title_clouseaumacros_show">
+                      <img src="" tal:attributes="src string:$portal_url/add_alternative_icon.gif">
+                      <span i18n:translate="label_clouseaumacros_show">Show</span>
+                    </a>
                     <a href="" onClick="clouseauChange('none'); return false;" title="Hide previous lines in this session"
-		       i18n:attributes="title title_clouseaumacros_hide">
-		      <img src="" tal:attributes="src string:$portal_url/download_icon.gif" /> 
-		      <span i18n:translate="label_clouseaumacros_hide">Hide</span>
-		    </a> 
-    			</p>
-    			<a name="footer-focus"></a>
-    		</div>
+                       i18n:attributes="title title_clouseaumacros_hide">
+                      <img src="" tal:attributes="src string:$portal_url/download_icon.gif" /> 
+                      <span i18n:translate="label_clouseaumacros_hide">Hide</span>
+                    </a> 
+                </p>
+                <a name="footer-focus"></a>
+            </div>
       </div>
     </div>
 </body>
