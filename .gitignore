@@ -1,0 +1,8 @@
+*.py[cod]
+
+# Translations
+*.mo
+
+# Packages
+*.egg-info
+dist

@@ -1,6 +1,11 @@
 # this is the first code that is run by a session
 from AccessControl.SecurityManagement import newSecurityManager
-from zope.app.component.hooks import setSite 
+try:
+    # Plone < 4.3
+    from zope.app.component.hooks import setSite
+except ImportError:
+    # Plone >= 4.3
+    from zope.component.hooks import setSite 
 from Testing.makerequest import makerequest
 from cStringIO import StringIO
 from Products.CMFCore.utils import getToolByName
